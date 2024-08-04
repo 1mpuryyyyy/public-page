@@ -1,0 +1,30 @@
+.startpage h1{
+    /*background-color: ;*/
+    margin: 20px;
+    padding: 20px 0 20px;
+}
+.startpage{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.startpage button{
+    border-radius: 10px;
+    padding: 5px 0 5px;
+    outline: none;
+    cursor: pointer;
+    background-color: bisque;
+}
+.startpage button:hover{
+    animation: hoverEffect 300ms forwards;
+}
+@keyframes hoverEffect {
+    0% {
+        background-color: bisque;
+        transform: scale(1);
+    }
+    100% {
+        background-color: #fad8b3; /* Конечный цвет фона */
+        transform: scale(1.03); /* Конечный размер */
+    }
+}

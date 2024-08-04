@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "bf847a88-7152-420e-a33a-8532c8970ed9",
+		"name": "summary",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23898009"
+	},
+	"item": [
+		{
+			"name": "get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/summary/?_id=4da1555a-d65e-4841-ae01-1a6c443be2b0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"summary",
+						""
+					],
+					"query": [
+						{
+							"key": "_id",
+							"value": "4da1555a-d65e-4841-ae01-1a6c443be2b0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Егор\",\r\n    \"lastname\": \"Кузовкин\",\r\n    \"links\": {\"github\": \"https://github.com/prok0l\",\r\n              \"tg\": \"t.me/prok0l\"},\r\n    \"photos\": [\"adjnad\", \"13yty2rsf\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://summary.prok0l.ru/api/summary/?_id=78fb65c8-f8b3-4480-900d-0168e60f34c5",
+					"protocol": "https",
+					"host": [
+						"summary",
+						"prok0l",
+						"ru"
+					],
+					"path": [
+						"api",
+						"summary",
+						""
+					],
+					"query": [
+						{
+							"key": "_id",
+							"value": "78fb65c8-f8b3-4480-900d-0168e60f34c5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

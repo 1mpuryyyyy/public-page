@@ -6,6 +6,7 @@ import {useEffect, useState} from "react";
 
 export default function VisitCard() {
     const [data, setData] = useState({})
+    const d = 0;
     const {id} = useParams();
     useEffect(() => {
         axios.get(`https://summary.prok0l.ru/api/summary/?_id=${id}`, {},)

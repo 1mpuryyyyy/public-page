@@ -21,8 +21,8 @@ export default function VisitCard() {
                 {data ? (
                     <div className={styles.buttons}>
                         <h2>{data.name}</h2>
-                        <a href={data.tg}>Телеграм</a>
-                        <a href={data.github}>GitHub</a>
+                        <a href={`/${data.tg}`}>Телеграм</a>
+                        <a href={`/${data.github}`}>GitHub</a>
                         <a>Портфолио</a>
                     </div>
                 ) : (

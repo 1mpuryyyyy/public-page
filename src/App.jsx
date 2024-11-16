@@ -4,10 +4,10 @@ import VisitCard from "./VisitCard/VisitCard.jsx";
 
 function App() {
     return (
-        <Router>
+        <Router basename={'public-page'}>
             <Routes>
-                <Route path="/public-page" element={<StartPage/>}/>
-                <Route path="/public-page/user/:uuid" element={<VisitCard/>}/>
+                <Route path="/" element={<StartPage/>}/>
+                <Route path="/user/:uuid" element={<VisitCard/>}/>
             </Routes>
         </Router>
     );

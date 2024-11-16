@@ -18,7 +18,7 @@ export default function GenerateVisitCard() {
         axios.post('https://summary.prok0l.ru/api/summary/', formData, {
             "Content-Type": "application/json"
         }).then(res => {
-            navigate(`/public-page/user/${res.data._id}`);
+            navigate(`/user/${res.data._id}`);
         })
     }
 

@@ -6,8 +6,8 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<StartPage/>}/>
-                <Route path="/user/:uuid" element={<VisitCard/>}/>
+                <Route path="/public-page" element={<StartPage/>}/>
+                <Route path="/public-page/user/:uuid" element={<VisitCard/>}/>
             </Routes>
         </Router>
     );

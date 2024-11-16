@@ -1,4 +1,4 @@
-import {useParams} from 'react-router-dom';
+import {useNavigate, useParams} from 'react-router-dom';
 import styles from './VisitCard.module.css'
 import ShareButton from "./ShareButton.jsx";
 import axios from 'axios';
@@ -6,9 +6,10 @@ import {useEffect, useState} from "react";
 
 export default function VisitCard() {
     const [data, setData] = useState({})
-    const {id} = useParams();
+    const {uuid} = useParams();
+    console.log(uuid)
     useEffect(() => {
-        axios.get(`https://summary.prok0l.ru/api/summary/?_id=${id}`, {},)
+        axios.get(`https://summary.prok0l.ru/api/summary/?_id=${uuid}`, {},)
             .then(res => {
                 setData(res.data)
             })
@@ -18,16 +19,17 @@ export default function VisitCard() {
         <section className={styles.VisitCard}>
             <div>
                 {data ? (
-                    <div>
+                    <div className={styles.buttons}>
                         <h2>{data.name}</h2>
-                        <p>Телеграм: {data.tg}</p>
-                        <p>GitHub: {data.github}</p>
+                        <a href={data.tg}>Телеграм</a>
+                        <a href={data.github}>GitHub</a>
+                        <a>Портфолио</a>
                     </div>
                 ) : (
                     <p>Пользователь не найден.</p>
                 )}
             </div>
-            <button className={styles.ShareButton} onClick={ShareButton}>Скопировать ссылку</button>
+            <button className={styles.ShareButton} onClick={ShareButton}>Поделиться</button>
         </section>
     );
 }
